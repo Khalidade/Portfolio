@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - portFolio2</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/portFolio2.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+            <div class="container">
+                <a class="logo" href="#">Daniel</a>
+                <ul class="nav">
+                    <li class="item">
+                        <a class="link" href="#home">Home</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#about">About</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#testmonial">Testmonial</a>
+                    </li>
+                    
+                    <li class="item">
+                        <a class="link" href="#contact">Contact</a>
+                    </li>
+               
+                </ul>
+                <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </a>
+            </div>
+        </nav><!-- End of Page Navbar -->
+    </header>
+    <div class="containe">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+   @* <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - portFolio2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
